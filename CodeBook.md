@@ -1,16 +1,15 @@
 # Code Book
 This code book explains the raw data, provided in the getting and cleaning data course at coursera, as well as  it explains the tidy data which is produced from the provided raw data.
-# The original raw data:
 ## Data Collection:
-The data collected  by a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities :
-*	WALKING
+The data collected  by a group of 30 volunteers within an age bracket of 19-48 years. Each person performed the following six activities :
+*   WALKING
 *   WALKING_UPSTAIRS
 *   WALKING_DOWNSTAIRS
 *   SITTING, STANDING
 *   LAYING) 
 
 ### Sensors Data
-Each volunteer wore a Smartphone (Samsung Galaxy S II)  on his/her waist. The  data was collected from two built-in Smartphone sensors: accelerometer and gyroscope.  were used to collect  the data. 
+Each volunteer wore a Smartphone (Samsung Galaxy S II)  on his/her waist. The  data was collected from two built-in Smartphone sensors: accelerometer and gyroscope. 
 The data  captured are the 3-axial linear acceleration and the 3-axial angular velocity at a constant rate of 50Hz. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data [1]. 
 
 ### Data Units
