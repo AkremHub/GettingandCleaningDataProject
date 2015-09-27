@@ -82,7 +82,7 @@ In this step, from the merged data we  extract the measurements which their labe
 * tBodyGyroJerkMag-mean()
 
 ## 3. Uses descriptive activity names to name the activities in the data set
-The  six descriptive activity names given in activity_labels.txt are used to describe each activity id. This achieved by adding an extra columns to the data extracted in the previous step.  This extra column is named as  : activityName.
+The  six descriptive activity names given in the activity_labels.txt file are used to describe each activity id. Based on the mapping between the activity name and the activity ids an extra column is added  to the data extracted in the previous step.  This extra column is named as  : activityName.
 
 ## 4. Label the data set with descriptive variable names
 The labels of the data set,extracted in the previous steps, are renamed with more descriptive names according to the following rules:
@@ -112,84 +112,84 @@ fBodyBodyGyroJerkMag-std ()--> fBodyBodyGyroJerkMagstd()
 
 ## 5. Creates  independent tidy data
 
-The final tidy data is created by average of each variable for each activity and each subject. The final tidy date contains:
+The final tidy data is created by average of each variable for each activity and each subject. The tidy data is ordered by the subject id then by the activity ids. The final tidy date contains:
 
-* 10299  rows
-* 6 unique activities :WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS,  SITTING, STANDING, and LAYING.
-* 30 subjects : 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30.
-* 66 features 
+*10299  rows
+*6 unique activities :WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS,  SITTING, STANDING, and LAYING.
+*30 subjects : 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30.
+*66 features 
 
 Here are the names of variables of the final tidy data
 
- [1] activityId                                              
- [2] subjectId                                               
- [3] timeBodyAccelerationMeanX                               
- [4] timeBodyAccelerationMeanY                               
- [5] timeBodyAccelerationMeanZ                               
- [6] timeBodyAccelerationStandardDeviationX                  
- [7] timeBodyAccelerationStandardDeviationY                  
- [8] timeBodyAccelerationStandardDeviationZ                  
- [9] timeGravityAccelerationMeanX                            
-[10] timeGravityAccelerationMeanY                            
-[11] timeGravityAccelerationMeanZ                            
-[12] timeGravityAccelerationStandardDeviationX               
-[13] timeGravityAccelerationStandardDeviationY               
-[14] timeGravityAccelerationStandardDeviationZ               
-[15] timeBodyAccelerationJerkMeanX                           
-[16] timeBodyAccelerationJerkMeanY                           
-[17] timeBodyAccelerationJerkMeanZ                           
-[18] timeBodyAccelerationJerkStandardDeviationX              
-[19] timeBodyAccelerationJerkStandardDeviationY              
-[20] timeBodyAccelerationJerkStandardDeviationZ              
-[21] timeBodyGyroscopeMeanX                                  
-[22] timeBodyGyroscopeMeanY                                  
-[23] timeBodyGyroscopeMeanZ                                  
-[24] timeBodyGyroscopeStandardDeviationX                     
-[25] timeBodyGyroscopeStandardDeviationY                     
-[26] timeBodyGyroscopeStandardDeviationZ                     
-[27] timeBodyGyroscopeJerkMeanX                              
-[28] timeBodyGyroscopeJerkMeanY                              
-[29] timeBodyGyroscopeJerkMeanZ                              
-[30] timeBodyGyroscopeJerkStandardDeviationX                 
-[31] timeBodyGyroscopeJerkStandardDeviationY                 
-[32] timeBodyGyroscopeJerkStandardDeviationZ                 
-[33] timeBodyAccelerationMagnitudeMean                       
-[34] timeBodyAccelerationMagnitudeStandardDeviation          
-[35] timeGravityAccelerationMagnitudeMean                    
-[36] timeGravityAccelerationMagnitudeStandardDeviation       
-[37] timeBodyAccelerationJerkMagnitudeMean                   
-[38] timeBodyAccelerationJerkMagnitudeStandardDeviation      
-[39] timeBodyGyroscopeMagnitudeMean                          
-[40] timeBodyGyroscopeMagnitudeStandardDeviation             
-[41] timeBodyGyroscopeJerkMagnitudeMean                      
-[42] timeBodyGyroscopeJerkMagnitudeStandardDeviation         
-[43] frequencyBodyAccelerationMeanX                          
-[44] frequencyBodyAccelerationMeanY                          
-[45] frequencyBodyAccelerationMeanZ                          
-[46] frequencyBodyAccelerationStandardDeviationX             
-[47] frequencyBodyAccelerationStandardDeviationY             
-[48] frequencyBodyAccelerationStandardDeviationZ             
-[49] frequencyBodyAccelerationJerkMeanX                      
-[50] frequencyBodyAccelerationJerkMeanY                      
-[51] frequencyBodyAccelerationJerkMeanZ                      
-[52] frequencyBodyAccelerationJerkStandardDeviationX         
-[53] frequencyBodyAccelerationJerkStandardDeviationY         
-[54] frequencyBodyAccelerationJerkStandardDeviationZ         
-[55] frequencyBodyGyroscopeMeanX                             
-[56] frequencyBodyGyroscopeMeanY                             
-[57] frequencyBodyGyroscopeMeanZ                             
-[58] frequencyBodyGyroscopeStandardDeviationX                
-[59] frequencyBodyGyroscopeStandardDeviationY                
-[60] frequencyBodyGyroscopeStandardDeviationZ                
-[61] frequencyBodyAccelerationMagnitudeMean                  
-[62] frequencyBodyAccelerationMagnitudeStandardDeviation     
-[63] frequencyBodayAccelerationJerkMagnitudeMean             
-[64] frequencyBodayAccelerationJerkMagnitudeStandardDeviation
-[65] frequencyBodayGyroscopeMagnitudeMean                    
-[66] frequencyBodayGyroscopeMagnitudeStandardDeviation       
-[67] frequencyBodayGyroscopeJerkMagnitudeMean                
-[68] frequencyBodayGyroscopeJerkMagnitudeStandardDeviation   
-[69] activityName
+ [1] "activityId"                                              
+ [2] "activityName"                                            
+ [3] "subjectId"                                               
+ [4] "timeBodyAccelerationMeanX"                               
+ [5] "timeBodyAccelerationMeanY"                               
+ [6] "timeBodyAccelerationMeanZ"                               
+ [7] "timeBodyAccelerationStandardDeviationX"                  
+ [8] "timeBodyAccelerationStandardDeviationY"                  
+ [9] "timeBodyAccelerationStandardDeviationZ"                  
+[10] "timeGravityAccelerationMeanX"                            
+[11] "timeGravityAccelerationMeanY"                            
+[12] "timeGravityAccelerationMeanZ"                            
+[13] "timeGravityAccelerationStandardDeviationX"               
+[14] "timeGravityAccelerationStandardDeviationY"               
+[15] "timeGravityAccelerationStandardDeviationZ"               
+[16] "timeBodyAccelerationJerkMeanX"                           
+[17] "timeBodyAccelerationJerkMeanY"                           
+[18] "timeBodyAccelerationJerkMeanZ"                           
+[19] "timeBodyAccelerationJerkStandardDeviationX"              
+[20] "timeBodyAccelerationJerkStandardDeviationY"              
+[21] "timeBodyAccelerationJerkStandardDeviationZ"              
+[22] "timeBodyGyroscopeMeanX"                                  
+[23] "timeBodyGyroscopeMeanY"                                  
+[24] "timeBodyGyroscopeMeanZ"                                  
+[25] "timeBodyGyroscopeStandardDeviationX"                     
+[26] "timeBodyGyroscopeStandardDeviationY"                     
+[27] "timeBodyGyroscopeStandardDeviationZ"                     
+[28] "timeBodyGyroscopeJerkMeanX"                              
+[29] "timeBodyGyroscopeJerkMeanY"                              
+[30] "timeBodyGyroscopeJerkMeanZ"                              
+[31] "timeBodyGyroscopeJerkStandardDeviationX"                 
+[32] "timeBodyGyroscopeJerkStandardDeviationY"                 
+[33] "timeBodyGyroscopeJerkStandardDeviationZ"                 
+[34] "timeBodyAccelerationMagnitudeMean"                       
+[35] "timeBodyAccelerationMagnitudeStandardDeviation"          
+[36] "timeGravityAccelerationMagnitudeMean"                    
+[37] "timeGravityAccelerationMagnitudeStandardDeviation"       
+[38] "timeBodyAccelerationJerkMagnitudeMean"                   
+[39] "timeBodyAccelerationJerkMagnitudeStandardDeviation"      
+[40] "timeBodyGyroscopeMagnitudeMean"                          
+[41] "timeBodyGyroscopeMagnitudeStandardDeviation"             
+[42] "timeBodyGyroscopeJerkMagnitudeMean"                      
+[43] "timeBodyGyroscopeJerkMagnitudeStandardDeviation"         
+[44] "frequencyBodyAccelerationMeanX"                          
+[45] "frequencyBodyAccelerationMeanY"                          
+[46] "frequencyBodyAccelerationMeanZ"                          
+[47] "frequencyBodyAccelerationStandardDeviationX"             
+[48] "frequencyBodyAccelerationStandardDeviationY"             
+[49] "frequencyBodyAccelerationStandardDeviationZ"             
+[50] "frequencyBodyAccelerationJerkMeanX"                      
+[51] "frequencyBodyAccelerationJerkMeanY"                      
+[52] "frequencyBodyAccelerationJerkMeanZ"                      
+[53] "frequencyBodyAccelerationJerkStandardDeviationX"         
+[54] "frequencyBodyAccelerationJerkStandardDeviationY"         
+[55] "frequencyBodyAccelerationJerkStandardDeviationZ"         
+[56] "frequencyBodyGyroscopeMeanX"                             
+[57] "frequencyBodyGyroscopeMeanY"                             
+[58] "frequencyBodyGyroscopeMeanZ"                             
+[59] "frequencyBodyGyroscopeStandardDeviationX"                
+[60] "frequencyBodyGyroscopeStandardDeviationY"                
+[61] "frequencyBodyGyroscopeStandardDeviationZ"                
+[62] "frequencyBodyAccelerationMagnitudeMean"                  
+[63] "frequencyBodyAccelerationMagnitudeStandardDeviation"     
+[64] "frequencyBodayAccelerationJerkMagnitudeMean"             
+[65] "frequencyBodayAccelerationJerkMagnitudeStandardDeviation"
+[66] "frequencyBodayGyroscopeMagnitudeMean"                    
+[67] "frequencyBodayGyroscopeMagnitudeStandardDeviation"       
+[68] "frequencyBodayGyroscopeJerkMagnitudeMean"                
+[69] "frequencyBodayGyroscopeJerkMagnitudeStandardDeviation"
 
 In the final step  the script saves the tidy data in tidyDataSet.txt file.
 	
