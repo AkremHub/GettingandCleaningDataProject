@@ -23,7 +23,7 @@ is available in your working directory.
 * README.R
 
  
-# STEP 1: Merges the training and the test sets to create one data set.
+### STEP 1: Merges the training and the test sets to create one data set.
 Load the activity and the feature descriptive files  to data frames and
 name the columns of the data frames with suitable names 
 
@@ -56,20 +56,20 @@ Merges the training and the test sets to create one data set
 
     dataSet1=rbind(trainingSet,testingSet)
 
-#
-## STEP 2: Extracts only the measurements on the mean and standard deviation for each measurement. 
+
+### STEP 2: Extracts only the measurements on the mean and standard deviation for each measurement. 
 
 Choose only the measurements that has mean() or std() in their names in the same time keep the activityId and subjectId
 
     dataSet2=dataSet1[,grepl("activityId",colnames(dataSet1))|grepl("subjectId",colnames(dataSet1))|grepl("mean\\()|std\\()",     colnames(dataSet1))]
 
-## STEP 3: Uses descriptive activity names to name the activities in the data set
+### STEP 3: Uses descriptive activity names to name the activities in the data set
 
 Merge  the dataSet2 with the activity that we already downloaded
 
     dataSet3=merge(activity,dataSet2)
 
-## STEP 4 :Appropriately labels the data set with descriptive variable names. 
+### STEP 4 :Appropriately labels the data set with descriptive variable names. 
     dataSet4=dataSet3
 
 The best practice is to use variables full names
@@ -94,8 +94,7 @@ Remove duplications
 
     names(dataSet4)=gsub("BodyBody","Boday",names(dataSet4))
 
-## STEP 5 : From the data set in step 4, creates a second, independent tidy data
-##         set with the average of each variable for each activity and each subject.
+### STEP 5 : From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 Remove  activityName (it is a factor !)  we can add it later
 
