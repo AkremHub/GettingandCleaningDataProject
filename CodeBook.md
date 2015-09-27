@@ -1,5 +1,5 @@
 # Code Book
-The code book explains the raw data  provided in the getting and cleaning data course at coursera as well as  it explains the tidy data that produced from the provided raw data.
+This code book explains the raw data, provided in the getting and cleaning data course at coursera, as well as  it explains the tidy data which is produced from the provided raw data.
 # The original raw data:
 ## Data Collection:
 The data collected  by a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities :
