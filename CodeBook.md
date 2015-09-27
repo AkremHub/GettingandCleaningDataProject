@@ -70,7 +70,7 @@ The set of variables that were estimated from these signals are:
 - The complete list of variables of each feature vector is available in 'features.txt'
 
 ## Unit of  measurements (Features)  
-The unit of the accelerometer  data is in 'g's (gravity of earth -> 9.80665 m/seg2) and the gyroscope units are rad/seg,  however ,the measurements are normalized  and bounded within [-1,1] so they are no  unit for the measurements [1].
+The unit of the accelerometer  data is in 'g's (gravity of earth -> 9.80665 m/seg2) and the gyroscope unit is rad/seg,  however ,the measurements are normalized  and bounded within [-1,1] so there are no  unit for the measurements.
 	
 ## Data Transformation
 The raw data described above are processed with run_analisys.R script  to generate tidy data. The following sections explains the main steps  that are used to generate the final  tidy data.
