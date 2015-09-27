@@ -114,10 +114,10 @@ fBodyBodyGyroJerkMag-std ()--> fBodyBodyGyroJerkMagstd()
 
 The final tidy data is created by average of each variable for each activity and each subject. The tidy data is ordered by the subject id then by the activity ids. The final tidy date contains:
 
-*10299  rows
-*6 unique activities :WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS,  SITTING, STANDING, and LAYING.
-*30 subjects : 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30.
-*66 features 
+* 10299  rows
+* 6 unique activities :WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS,  SITTING, STANDING, and LAYING.
+* 30 subjects : 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30.
+* 66 features 
 
 Here are the names of variables of the final tidy data
 
