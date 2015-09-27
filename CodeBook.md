@@ -8,9 +8,11 @@ The data collected  by a group of 30 volunteers within an age bracket of 19-48 y
 *   WALKING_DOWNSTAIRS
 *   SITTING, STANDING
 *   LAYING) 
+
 ### Sensors Data
 Each volunteer wore a Smartphone (Samsung Galaxy S II)  on his/her waist. The  data was collected from two built-in Smartphone sensors: accelerometer and gyroscope.  were used to collect  the data. 
 The data  captured are the 3-axial linear acceleration and the 3-axial angular velocity at a constant rate of 50Hz. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data [1]. 
+
 ### Data Units
 * The units used for the accelerations (total and body) are 'g's (gravity of earth -> 9.80665 m/seg2). 
 * The gyroscope units are rad/seg. 
@@ -66,6 +68,7 @@ The set of variables that were estimated from these signals are:
 - tBodyGyroMean
 - tBodyGyroJerkMean
 - The complete list of variables of each feature vector is available in 'features.txt'
+
 ## Unit of  measurements (Features)  
 The unit of the accelerometer  data is in 'g's (gravity of earth -> 9.80665 m/seg2) and the gyroscope units are rad/seg,  however ,the measurements are normalized  and bounded within [-1,1] so they are no  unit for the measurements [1].
 	
@@ -76,8 +79,9 @@ In this step the training data (subject_train,y_train,X_train) and the testing d
 ## 2. Extracts only the measurements on the mean and standard deviation for each measurement
 In this step, from the merged data we  extract the measurements which their label contains mean() or std().
 ##### Examples:
-- fBodyBodyGyroJerkMag-std()
-- tBodyGyroJerkMag-mean()
+* fBodyBodyGyroJerkMag-std()
+* tBodyGyroJerkMag-mean()
+
 ## 3. Uses descriptive activity names to name the activities in the data set
 The  six descriptive activity names given in activity_labels.txt are used to describe each activity id. This achieved by adding an extra columns to the data extracted in the previous step.  This extra column is named as  : activityName.
 
@@ -91,21 +95,30 @@ The labels of the data set,extracted in the previous steps, are renamed with mor
 - t--> time
 - f--> frequency
 - std --> StandardDeviation 
+
 #### b) Remove the ( ) from the names
 ##### Example:
 fBodyBodyGyroJerkMag-std() -->  fBodyBodyGyroJerkMag-std
+
 #### c) Remove - from the names
+
 ##### Example:
 fBodyBodyGyroJerkMag-std ()--> fBodyBodyGyroJerkMagstd()
+
 #### d) Remove duplications from names
+
 ##### Example:
- - fBodyBodyGyroJerkMag-std ()--> fBodyGyroJerkMag-std()
+
+ * fBodyBodyGyroJerkMag-std ()--> fBodyGyroJerkMag-std()
+
 ## 5. Creates  independent tidy data
-The final tidy data is created by average of each variable for each activity and each subject. The final tidy date contains: 
-    - 10299  rows
-    - 6 unique activities :WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS,  SITTING, STANDING, and LAYING.
-    - 30 subjects : 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30.
-    - 66 features 
+
+The final tidy data is created by average of each variable for each activity and each subject. The final tidy date contains:
+
+    * 10299  rows
+    * 6 unique activities :WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS,  SITTING, STANDING, and LAYING.
+    * 30 subjects : 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30.
+    * 66 features 
 
 Here are the names of variables of the final tidy data
 
